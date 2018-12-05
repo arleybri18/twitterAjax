@@ -1,23 +1,40 @@
 
-<div class="row">
-  <div class="col-lg-6">
-    <ul>
-      <% @posts.each do |post|%>
-      <div class="form-group">
-        <h1>Título</h1><li><%= post.title%></li>
-      </div>
-      <div class="form-group">
-        <h2>Description</h2><li><%= post.description%></li>
-      <% end %>
-    </ul>
-    <%= link_to 'Crear un post', '/posts/new'%>
-  </div>
-
-  <div class="col-lg-6">
+<div class="row mt-2 ">
+<div class="container border border-primary rounded p-4">
+  <div class="col-md-6 offset-md-3">
+    <h3 class="text-center text-primary">Twitter App</h3>
     <%= render partial: 'form'%>
+    <!--<%= link_to 'Listar todos los post', '/',class: "btn btn-primary boton-post mt-2" %>-->
+    
+    
   </div>
 </div>
+</div>
 
-<script>
-  PostIndexView()
-</script>
+<div class="row mt-3 d-none" id="row">
+  <div class="container d-flex  border border-primary rounded p-4 ">
+    <div class="col-sm-6">
+      <table class="table table-light table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Titulo</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="col-sm-6">
+
+      <div class="cards">
+
+      </div>
+    </div>
+
+    <script>
+      PostIndexView()
+    </script>

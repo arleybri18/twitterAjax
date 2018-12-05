@@ -6,7 +6,11 @@
   </div>
   <div class="form-group">
     <%= f.label :Descripción  %>:
-    <%= f.text_field :description, class:"form-control" %>
+    <%= f.text_area :description, class:"form-control" %>
   </div>
+  <div>
   <%= f.submit class: "btn btn-primary" %>
+  <%= link_to 'Listar todos los post', '/',class: "btn btn-primary boton-post",remote:true %> <!--Con esta forma se crea un partial que tendra
+      la tabla que se quiere mostrar _post.html.erb, y en javascript posts.js se solicita renderizar el partial _post.html.erb-->
+</div>
 <% end %>
